@@ -3,9 +3,9 @@
 #reboottime=$1
 #offset=$2
 
-reboottime=$(uci get rebootcron.rebootcron.time)
-offset=$(uci get rebootcron.rebootcron.offset)
-enabled=$(uci get rebootcron.rebootcron.enabled)
+reboottime=$(uci get dailyreboot.dailyreboot.time)
+offset=$(uci get dailyreboot.dailyreboot.offset)
+enabled=$(uci get dailyreboot.dailyreboot.enabled)
 
 
 #get hours of reboottime
@@ -14,7 +14,7 @@ hours=$(($(date -d "$reboottime" +"%H")))
 #get minutes of reboottime
 minutes=$(($(date -d "$reboottime" +"%M")))
 
-crontab -l | grep -v 'rebootscript'  | crontab -
+crontab -l | grep -v 'dailyreboot'  | crontab -
 
 if [ $enabled = "1" ]
 then
@@ -22,7 +22,7 @@ then
 	#write out current crontab
 	crontab -l > mycron
 	#echo new cron into cron file
-	echo "$minutes $hours * * * /usr/bin/rebootscript $offset" >> mycron
+	echo "$minutes $hours * * * /usr/bin/dailyreboot $offset" >> mycron
 	#install new cron file
 	crontab mycron
 rm mycron

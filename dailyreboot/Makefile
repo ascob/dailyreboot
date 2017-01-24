@@ -34,13 +34,13 @@ endef
 
 define Package/dailyreboot/install
 	$(INSTALL_DIR) $(1)/usr/sbin
-	$(INSTALL_BIN) ./src/rebootcron.sh $(1)/usr/sbin/
+	$(INSTALL_BIN) ./src/dailyreboot.sh $(1)/usr/sbin/
 	$(INSTALL_DIR) $(1)/usr/bin
-	$(INSTALL_BIN) ./src/rebootscript $(1)/usr/bin/
+	$(INSTALL_BIN) ./src/dailyreboot $(1)/usr/bin/
 	$(INSTALL_DIR) $(1)/etc/init.d
-	$(INSTALL_BIN) ./src/rebootcron.init $(1)/etc/init.d/rebootcron
+	$(INSTALL_BIN) ./src/dailyreboot.init $(1)/etc/init.d/dailyreboot
 	$(INSTALL_DIR) $(1)/etc/config
-	$(INSTALL_DATA) ./src/rebootcron.config $(1)/etc/config/rebootcron
+	$(INSTALL_DATA) ./src/dailyreboot.config $(1)/etc/config/dailyreboot
 endef
 
 $(eval $(call BuildPackage,dailyreboot))

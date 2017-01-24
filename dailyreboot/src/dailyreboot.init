@@ -3,8 +3,8 @@
 START=99
 
 USE_PROCD=1
-PROG=/usr/sbin/rebootcron.sh
-CONFFILE=/etc/config/rebootcron
+PROG=/usr/sbin/dailyreboot.sh
+CONFFILE=/etc/config/dailyreboot
 
 start_service() {
 	procd_open_instance

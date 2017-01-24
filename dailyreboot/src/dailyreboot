@@ -28,11 +28,11 @@ if [ $(uptime | awk '{ print $3 }' | cut -d':' -f1) -gt 0 ]
 then
     echo "Cool Beans"
     sleep $randomoffset
-    logger rebootcron "Rebooting now."
+    logger dailyreboot "Rebooting now."
     reboot &
     sleep 30s
     echo b > /proc/sysrq-trigger
 else
     echo "Less then 1 hour uptime."
-    logger rebootcron "Less then 1 hour uptime."
+    logger dailyreboot "Less then 1 hour uptime."
 fi
