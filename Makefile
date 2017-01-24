@@ -14,25 +14,25 @@ PKG_LICENSE:=GPL-3.0+
 
 include $(INCLUDE_DIR)/package.mk
 
-define Package/$(PKG_NAME)
+define Package/dailyreboot
     SECTION:=utils
     CATEGORY:=Utilities
     TITLE:=Sets cronjob for daily reboot with random offset.
     MAINTAINER:=Tobias Ilte <tobias.ilte@campus.tu-berlin.de>
 endef
 
-define Package/$(PKG_NAME)/description
+define Package/dailyreboot/description
 Sets cronjob for daily reboot with random offset.
 endef
 
-define Package/$(PKG_NAME)/conffiles
+define Package/dailyreboot/conffiles
 /etc/config/rebootcron
 endef
 
 define Build/Compile
 endef
 
-define Package/$(PKG_NAME)/install
+define Package/dailyreboot/install
 	$(INSTALL_DIR) $(1)/usr/sbin
 	$(INSTALL_BIN) ./src/rebootcron.sh $(1)/usr/sbin/
 	$(INSTALL_DIR) $(1)/usr/bin
@@ -43,5 +43,5 @@ define Package/$(PKG_NAME)/install
 	$(INSTALL_DATA) ./src/rebootcron.config $(1)/etc/config/rebootcron
 endef
 
-$(eval $(call BuildPackage,$(PKG_NAME)))
+$(eval $(call BuildPackage,dailyreboot))
 
