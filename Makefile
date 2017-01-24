@@ -10,17 +10,15 @@ PKG_VERSION:=1.0
 PKG_RELEASE:=1
 PKG_MAINTAINER:=Tobias Ilte <tobias.ilte@campus.tu-berlin.de>
 PKG_LICENSE:=GPL-3.0+
-PKG_LICENSE_FILES:=LICENSE
+
 
 include $(INCLUDE_DIR)/package.mk
 
 define Package/$(PKG_NAME)
-    SECTION:=net
-    CATEGORY:=Network
-    SUBMENU:=wireless
-    DEPENDS:=
-    MAINTAINER:=Tobias Ilte <tobias.ilte@campus.tu-berlin.de>
+    SECTION:=utils
+    CATEGORY:=Utilities
     TITLE:=Sets cronjob for daily reboot with random offset.
+    MAINTAINER:=Tobias Ilte <tobias.ilte@campus.tu-berlin.de>
 endef
 
 define Package/$(PKG_NAME)/description
@@ -32,7 +30,6 @@ define Package/$(PKG_NAME)/conffiles
 endef
 
 define Build/Compile
-	true
 endef
 
 define Package/$(PKG_NAME)/install
