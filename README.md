@@ -3,7 +3,7 @@ Daily reboot configurator with LEDE Linux [www.lede-project.org]
 
 ### How to install dailyreboot ?
 
-1. Add `src-git dynapoint https://github.com/ascob/dailyreboot.git` to your feeds.conf
+1. Add `src-git dailyreboot https://github.com/ascob/dailyreboot.git` to your feeds.conf
 2. Run `./scripts/feeds update dailyreboot`
 3. Run `./scripts/feeds install dailyreboot`
 4. Run `make menuconfig` and select dailyreboot under Utilities
