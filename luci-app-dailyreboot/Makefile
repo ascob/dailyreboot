@@ -35,7 +35,7 @@ define Package/$(PKG_NAME)/install
 	$(INSTALL_DIR) $(1)/etc/uci-defaults
 	$(INSTALL_BIN) ./root/etc/uci-defaults/40_luci-dailyreboot $(1)/etc/uci-defaults/40_luci-dailyreboot
 	$(INSTALL_DIR) $(1)/usr/lib/lua/luci/model/cbi/dailyreboot
-	$(INSTALL_DATA) ./luasrc/model/cbi/dailyreboot.lua $(1)/usr/lib/lua/luci/model/cbi/dailyreboot/dailyreboot.lua
+	$(INSTALL_DATA) ./luasrc/model/cbi/dailyreboot.lua $(1)/usr/lib/lua/luci/model/cbi/dailyreboot.lua
 	$(INSTALL_DIR) $(1)/usr/lib/lua/luci/controller
 	$(INSTALL_DATA) ./luasrc/controller/dailyreboot.lua $(1)/usr/lib/lua/luci/controller/dailyreboot.lua
 endef
