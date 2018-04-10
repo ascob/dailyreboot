@@ -1,5 +1,5 @@
 
-Daily reboot configurator with LEDE Linux [www.lede-project.org]
+Daily reboot configurator with OpenWrt [https://openwrt.org]
 
 ### How to install dailyreboot ?
 
@@ -15,7 +15,7 @@ Configuration in /etc/config/dailyreboot:
 ```
 config dailyreboot dailyreboot
 	option enabled '1'
-	option time '03:00' # sets reboot time to 03:00 am.
+	option time '03:00' 	# sets reboot time to 03:00 am.
 	option offset '50' 	# adds random offset between 0 and 50 minutes to reboot time
 
 ```
