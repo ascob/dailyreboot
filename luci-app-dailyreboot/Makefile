@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2017 LEDE project (Tobias Ilte)
+# Copyright (C) 2017 OpenWrt project (Tobias Ilte)
 #
 # This is free software, licensed under the GNU General Public License v3.
 

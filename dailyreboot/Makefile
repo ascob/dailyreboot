@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2016 LEDE project (Tobias Ilte)
+# Copyright (C) 2016-2018 OpenWrt project (Tobias Ilte)
 #
 # This is free software, licensed under the GNU General Public License v3.
 
@@ -7,7 +7,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=dailyreboot
 PKG_VERSION:=1.0
-PKG_RELEASE:=1
+PKG_RELEASE:=2
 PKG_MAINTAINER:=Tobias Ilte <tobias.ilte@campus.tu-berlin.de>
 PKG_LICENSE:=GPL-3.0+
 
