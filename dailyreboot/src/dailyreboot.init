@@ -5,5 +5,5 @@ START=99
 USE_PROCD=1
 
 start_service() {
-	sh /usr/sbin/dailyreboot.sh
+	sh /usr/sbin/dailyreboot-setcron.sh
 }
