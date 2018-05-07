@@ -22,7 +22,7 @@ then
 	#write out current crontab
 	crontab -l > mycron
 	#echo new cron into cron file
-	echo "$minutes $hours * * * /usr/bin/dailyreboot $offset" >> mycron
+	echo "$minutes $hours * * * /usr/bin/dailyreboot_check.sh $offset" >> mycron
 	#install new cron file
 	crontab mycron
 	rm mycron
