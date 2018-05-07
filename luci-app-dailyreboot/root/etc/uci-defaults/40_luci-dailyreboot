@@ -2,7 +2,7 @@
 
 # needed for "Save and Apply" to restart dailyreboot
 uci -q batch <<-EOF >/dev/null
-	delete ucitrack.@dynapoint[-1]
+	delete ucitrack.@dailyreboot[-1]
 	add ucitrack dailyreboot
 	set ucitrack.@dailyreboot[-1].init="dailyreboot"
 	commit dailyreboot
