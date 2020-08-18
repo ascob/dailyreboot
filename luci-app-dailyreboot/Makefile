@@ -39,9 +39,9 @@ define Package/$(PKG_NAME)/install
 	$(INSTALL_DIR) $(1)/usr/lib/lua/luci/controller
 	$(INSTALL_DATA) ./luasrc/controller/dailyreboot.lua $(1)/usr/lib/lua/luci/controller/dailyreboot.lua
 	$(INSTALL_DIR) $(1)/usr/share/luci/menu.d
-        $(INSTALL_DATA) ./root/usr/share/luci/menu.d/luci-app-dailyreboot.json $(1)/usr/share/luci/menu.d/luci-app-dailyreboot.json
+	$(INSTALL_DATA) ./root/usr/share/luci/menu.d/luci-app-dailyreboot.json $(1)/usr/share/luci/menu.d/luci-app-dailyreboot.json
 	$(INSTALL_DIR) $(1)/usr/share/rpcd/acl.d
-        $(INSTALL_DATA) ./root/usr/share/rpcd/acl.d/luci-app-dailyreboot.json $(1)/usr/share/rpcd/acl.d/luci-app-dailyreboot.json
+	$(INSTALL_DATA) ./root/usr/share/rpcd/acl.d/luci-app-dailyreboot.json $(1)/usr/share/rpcd/acl.d/luci-app-dailyreboot.json
 endef
 
 $(eval $(call BuildPackage,$(PKG_NAME)))
