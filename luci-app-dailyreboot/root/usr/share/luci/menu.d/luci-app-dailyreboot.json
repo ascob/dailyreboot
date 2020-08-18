@@ -1,0 +1,14 @@
+{
+	"admin/services/dailyreboot": {
+		"title": "Dailyreboot",
+		"action": {
+			"type": "cbi",
+			"path": "dailyreboot",
+			"post": { "cbi.submit": true }
+		},
+		"depends": {
+			"acl": [ "luci-app-dailyreboot" ],
+			"uci": { "dailyreboot": true }
+		}
+	}
+}
