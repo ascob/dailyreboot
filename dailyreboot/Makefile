@@ -18,6 +18,7 @@ define Package/dailyreboot
     SECTION:=utils
     CATEGORY:=Utilities
     TITLE:=Sets cronjob for daily reboot with random offset.
+    DEPENDS:=+micrond
     MAINTAINER:=Tobias Ilte <tobias.ilte@campus.tu-berlin.de>
 endef
 
@@ -44,4 +45,3 @@ define Package/dailyreboot/install
 endef
 
 $(eval $(call BuildPackage,dailyreboot))
-

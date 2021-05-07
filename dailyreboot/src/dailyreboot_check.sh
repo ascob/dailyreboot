@@ -5,7 +5,7 @@ _math_random_integer()		# OUT1: integer, higher or equal => $START and lower or 
 {
 	local start="${1:-0}"
 	local end="${2:-60}"
-		
+
 	local seed diff random out
 
 	seed="$( hexdump -n 2 -e '/2 "%u"' /dev/urandom )"	# e.g. 0...65536
@@ -24,7 +24,7 @@ _math_random_integer 0 $offset
 randomoffset=$(($randomresult*60))
 echo $randomoffset
 
-if [ $(uptime | awk '{ print $3 }' | cut -d':' -f1) -gt 0 ]
+if [ $(cat /proc/uptime | cut -d'.' -f1) -gt 3600 ]
 then
     echo "Cool Beans"
     sleep $randomoffset
